@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Receitas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="topo">
+        <div>
+            <a href="index.html">PowerFit</a>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="login.html">Login</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="contato.html">Contato</a>
+            <a href="carrinho.html">Carrinho</a>
+            <a href="receitas.html" class="ativo">Receitas</a>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <section class="receitas">
+
+        <h2>Receitas dos Usuários</h2>
+        <p>Aqui ficarão as receitas que forem enviadas pelos usuários:</p>
+
+        <!-- APENAS O ESPAÇO DAS RECEITAS -->
+        <div id="lista-receitas">
+            <p>Nenhuma receita publicada ainda.</p>
+        </div>
+
+        <hr><br>
+
+        <!-- FORMULÁRIO DE NOVA RECEITA (APENAS HTML) -->
+        <section class="enviar-receita">
+            <h2>Adicionar Nova Receita</h2>
+
+            <form>
+
+                <label for="nomeReceita">Nome da Receita:</label>
+                <input type="text" id="nomeReceita" name="nomeReceita">
+
+                <label for="descReceita">Descrição:</label>
+                <textarea id="descReceita" name="descReceita"></textarea>
+
+                <label for="ingredientesReceita">Ingredientes:</label>
+                <textarea id="ingredientesReceita" name="ingredientesReceita"></textarea>
+
+                <label for="preparoReceita">Modo de Preparo:</label>
+                <textarea id="preparoReceita" name="preparoReceita"></textarea>
+
+                <label for="fotoReceita">Anexar Foto:</label>
+                <input type="file" id="fotoReceita" name="fotoReceita" accept="image/*">
+
+                <label for="videoReceita">Anexar Vídeo:</label>
+                <input type="file" id="videoReceita" name="videoReceita" accept="video/*">
+
+                <button type="submit">Enviar Receita</button>
+
+            </form>
+        </section>
+
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <p>2025 PowerFit. Todos os direitos reservados</p>
+        <p><a href="contato.html">Contato</a></p>
+    </footer>
+
+</body>
+
+</html>
