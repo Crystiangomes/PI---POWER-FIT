@@ -1,51 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head> <!-- Cabeça do site. -->
-    
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widht=device-width, initial=scale=1.0">
-    <meta name="description" content="Aumente o nível do seu treino com a PowerFit-Suplementos!! ">
-    <link rel="stylesheet" href="css/style.css">
-    <title>PowerFit-Suplementos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PowerFit Suplementos: aumente seu desempenho com suplementos de alta qualidade para energia, força e performance.">
+    <meta name="keywords" content="suplementos, academia, whey, creatina, pré-treino, PowerFit">
+    <meta name="author" content="PowerFit Suplementos">
+    <link rel="stylesheet" href="css/index.css">
+    <title>PowerFit | Energia, Força e Performance</title>
 
+    <!-- IDENTIDADE VISUAL (SÓ HTML) -->
+    <style>
+        body {
+            background-color: #0F0F0F;
+            color: #FFFFFF;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        a {
+            color: #D4FF00;
+            text-decoration: none;
+        }
+
+        .btn-primario {
+            background-color: #D4FF00;
+            color: #0F0F0F;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-secundario {
+            border: 2px solid #D4FF00;
+            color: #D4FF00;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .logo span {
+            color: #D4FF00;
+        }
+
+        .rodape {
+            border-top: 1px solid #333;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
-<body> <!-- Corpo do site. -->
+<body>
 
-    <header class="topo"> <!-- Cabeçalho de navegação dos links. -->
+    <!-- CABEÇALHO -->
+    <header class="topo">
         <div class="logo">
-            <a href="index.html">Power<span>Fit</span></a>
+            <h1>
+                <a href="index.html">Power<span>Fit</span></a>
+            </h1>
         </div>
 
-            <nav class="menu">
-            <a href="index.html">Inicio</a>        
-            <a href="sobre.html">Sobre</a> 
-            <a href="receitas.html">Receitas</a>
-            <a href="contato.html">Contato</a>
-            <a href="login.html">Login</a>
+        <nav class="menu" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section class="hero"> <!-- Seção de conteúdo 1. -->
+    <!-- HERO -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Potência que acompanha seu ritmo</h2>
+                <p>
+                    Na <strong>PowerFit</strong> você encontra os melhores suplementos para maximizar sua performance,
+                    acelerar seus resultados e transformar seu treino.
+                </p>
 
-        <div class="container hero">
-            <h1>Power que acompanha seu ritmo.</h1>
-            <p>Aprenda desenvolvimento WEB, logica e banco de dados com aulas praticas</p>
-            <a href="cursos.html" class="btn-primario">Ver Cursos</a>
-            <a href="contato.html" class="btn-secundario">Fale com a gente</a>
+                <div class="acoes">
+                    <a href="produtos.html" class="btn-primario">Ver Produtos</a>
+                    <a href="contato.html" class="btn-secundario">Fale com a gente</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFÍCIOS -->
+        <section class="beneficios">
+            <div class="container">
+                <h3>Por que escolher a PowerFit?</h3>
+
+                <ul>
+                    <li>💪 Produtos testados e aprovados</li>
+                    <li>⚡ Mais energia e resistência</li>
+                    <li>🏋️ Resultados reais no seu treino</li>
+                    <li>📦 Entrega rápida e segura</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <h3>Pronto para evoluir?</h3>
+                <p>Comece hoje mesmo a transformar seu corpo e sua performance.</p>
+                <a href="produtos.html" class="btn-primario">Quero evoluir</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <p>© 2025 PowerFit Suplementos. Todos os direitos reservados.</p>
+
+            <nav aria-label="Links do rodapé">
+                <a href="sobre.html">Sobre</a> |
+                <a href="receitas.html">Receitas</a> |
+                <a href="contato.html">Contato</a>
+            </nav>
         </div>
-
-    </section>
-    
-    <footer class="rodape"> <!-- Seção de rodapé do site. -->
-
-        <p>2025 PowerFit-Suplementos. Todos os direitos reservados</p>
-        <p><a href="contato.html">Contato</a></p>
-
     </footer>
 
-    <script src="js/script.js"></script> <!-- Código de importação do Javascript. -->
-
+    <script src="js/script.js"></script>
 </body>
 </html>
