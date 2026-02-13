@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Power Fit - Contato</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#0F0F0F;
+            color:#fff;
+        }
+
+        /* TOPO */
+        .topo{
+            background:#0F0F0F;
+            padding:15px 40px;
+            border-bottom:1px solid #222;
+        }
+
+        .menu{
+            display:flex;
+            align-items:center;
+            gap:30px;
+            list-style:none;
+        }
+
+        .logo{
+            width:50px;
+        }
+
+        .menu a{
+            text-decoration:none;
+            color:#fff;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        .menu a:hover{
+            color:#D4FF00;
+        }
+
+        /* CONTATO */
+        .contato{
+            max-width:600px;
+            margin:120px auto;
+            text-align:center;
+        }
+
+        .contato h1{
+            font-size:36px;
+            margin-bottom:10px;
+        }
+
+        .contato span{
+            color:#D4FF00;
+        }
+
+        .contato p{
+            margin-bottom:40px;
+            color:#ccc;
+        }
+
+        .form-contato{
+            display:flex;
+            flex-direction:column;
+            gap:15px;
+        }
+
+        .form-contato input,
+        .form-contato textarea{
+            padding:12px;
+            border:none;
+            border-radius:5px;
+            outline:none;
+            font-size:14px;
+        }
+
+        .form-contato textarea{
+            height:120px;
+            resize:none;
+        }
+
+        .form-contato button{
+            background:#D4FF00;
+            color:#0F0F0F;
+            border:none;
+            padding:14px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .form-contato button:hover{
+            opacity:0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="topo">
+        <ul class="menu">
+            <img src="Power fit.png" class="logo">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="receitas.html">Receitas</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+        </ul>
+    </nav>
+
+    <section class="contato">
+        <h1>Fale com a <span>Power Fit</span></h1>
+        <p>Preencha o formulário abaixo e entraremos em contato com você.</p>
+
+        <form class="form-contato">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <input type="text" placeholder="Assunto">
+            <textarea placeholder="Sua mensagem" required></textarea>
+            <button type="submit">ENVIAR MENSAGEM</button>
+        </form>
+    </section>
+
+</body>
+</html>
