@@ -5,6 +5,55 @@
     <meta charset="UTF-8">
     <title>Receitas</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- IDENTIDADE VISUAL POWERFIT -->
+    <style>
+        body {
+            background-color: #0F0F0F;
+            color: #FFFFFF;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        a {
+            color: #D4FF00;
+            text-decoration: none;
+        }
+
+        h2 {
+            color: #D4FF00;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            background-color: #1a1a1a;
+            color: #FFFFFF;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #D4FF00;
+            color: #0F0F0F;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .rodape {
+            border-top: 1px solid #333;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,7 +61,7 @@
     <!-- CABEÇALHO -->
     <header class="topo">
         <div>
-            <a href="index.html">PowerFit</a>
+            <a href="index.html">Power<span style="color:#D4FF00;">Fit</span></a>
         </div>
 
         <nav class="menu">
@@ -32,14 +81,13 @@
         <h2>Receitas dos Usuários</h2>
         <p>Aqui ficarão as receitas que forem enviadas pelos usuários:</p>
 
-        <!-- APENAS O ESPAÇO DAS RECEITAS -->
         <div id="lista-receitas">
             <p>Nenhuma receita publicada ainda.</p>
         </div>
 
         <hr><br>
 
-        <!-- FORMULÁRIO DE NOVA RECEITA (APENAS HTML) -->
+        <!-- FORMULÁRIO -->
         <section class="enviar-receita">
             <h2>Adicionar Nova Receita</h2>
 
@@ -72,10 +120,9 @@
 
     <!-- RODAPÉ -->
     <footer class="rodape">
-        <p>2025 PowerFit. Todos os direitos reservados</p>
+        <p>© 2025 PowerFit. Todos os direitos reservados</p>
         <p><a href="contato.html">Contato</a></p>
     </footer>
 
 </body>
-
 </html>
