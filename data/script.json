@@ -1,0 +1,28 @@
+{
+  "produtos": [
+    {
+      "nome": "Whey Protein PowerFit",
+      "categoria": "proteina",
+      "preco": 129.90,
+      "imagem": "../imagens/whey.jpg"
+    },
+    {
+      "nome": "Creatina PowerFit",
+      "categoria": "creatina",
+      "preco": 89.90,
+      "imagem": "../imagens/creatina.jpg"
+    },
+    {
+      "nome": "Pré Treino PowerFit",
+      "categoria": "pre-treino",
+      "preco": 99.90,
+      "imagem": "../imagens/pretreino.jpg"
+    },
+    {
+      "nome": "BCAA PowerFit",
+      "categoria": "aminoacido",
+      "preco": 79.90,
+      "imagem": "../imagens/bcaa.jpg"
+    }
+  ]
+}

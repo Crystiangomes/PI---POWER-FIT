@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Receitas saudáveis e proteicas da comunidade PowerFit. Compartilhe suas receitas!">
+    <meta name="author" content="PowerFit Suplementos">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>PowerFit — Receitas</title>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="topo">
+        <div class="topo-inner">
+            <div class="logo">
+                <a href="index.html">Power<span>Fit</span></a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav>
+                <ul class="menu" id="menu">
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="receitas.html" class="ativo">Receitas</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="carrinho.html" class="carrinho-icon">🛒 <span class="badge" id="badgeContador">0</span></a></li>
+                    <li><a href="login.html" class="btn-login-nav">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO DA PÁGINA -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Receitas da <span>Comunidade</span></h1>
+                <p>Receitas saudáveis, proteicas e deliciosas compartilhadas pelos nossos clientes.</p>
+            </div>
+        </section>
+
+        <section class="receitas">
+            <div class="container">
+
+                <!-- LISTA DE RECEITAS PUBLICADAS -->
+                <div class="section-header" style="text-align:left; margin-bottom: 28px;">
+                    <h2>Receitas <span>Publicadas</span></h2>
+                </div>
+
+                <div class="receitas-lista" id="lista-receitas">
+                    <!-- Receitas de exemplo -->
+                    <div class="receita-card">
+                        <h3>🥤 Shake de Whey com Banana</h3>
+                        <p><strong>Por:</strong> Lucas Ferreira</p>
+                        <p style="margin-top: 8px;">Uma receita simples e deliciosa para o pós-treino. Misture 2 scoops de whey protein com 1 banana, 200ml de leite e gelo.</p>
+                    </div>
+                    <div class="receita-card">
+                        <h3>🥞 Panqueca Proteica</h3>
+                        <p><strong>Por:</strong> Ana Carolina</p>
+                        <p style="margin-top: 8px;">2 ovos + 1 scoop de whey + 1 banana amassada. Misture tudo e frite em frigideira antiaderente. Perfeita para o café da manhã!</p>
+                    </div>
+                    <div class="receita-card">
+                        <h3>🍫 Bolinho de Creatina</h3>
+                        <p><strong>Por:</strong> Rafael Lima</p>
+                        <p style="margin-top: 8px;">Misture aveia, mel, cacau em pó, pasta de amendoim e 1 dose de creatina. Molde em bolinhas e leve à geladeira por 30 min.</p>
+                    </div>
+
+                    <!-- Receitas adicionadas pelo usuário aparecerão aqui -->
+                    <div id="receitas-dinamicas"></div>
+                </div>
+
+                <div class="section-divider" style="margin-bottom: 56px;"></div>
+
+                <!-- FORMULÁRIO PARA ADICIONAR RECEITA -->
+                <div class="enviar-receita">
+                    <h2>Adicionar <span>Nova Receita</span></h2>
+                    <p>Compartilhe sua receita com a comunidade PowerFit!</p>
+
+                    <form id="formReceita" novalidate>
+                        <div class="form-group">
+                            <label for="nomeReceita">Nome da Receita *</label>
+                            <input type="text" id="nomeReceita" name="nomeReceita" placeholder="Ex: Shake de Whey com Morango" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="autorReceita">Seu Nome *</label>
+                            <input type="text" id="autorReceita" name="autorReceita" placeholder="Seu nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descReceita">Descrição</label>
+                            <textarea id="descReceita" name="descReceita" placeholder="Descreva brevemente sua receita..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ingredientesReceita">Ingredientes *</label>
+                            <textarea id="ingredientesReceita" name="ingredientesReceita" placeholder="Liste os ingredientes..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preparoReceita">Modo de Preparo *</label>
+                            <textarea id="preparoReceita" name="preparoReceita" placeholder="Descreva o passo a passo..." required></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fotoReceita">Foto (opcional)</label>
+                                <input type="file" id="fotoReceita" name="fotoReceita" accept="image/*">
+                            </div>
+                            <div class="form-group">
+                                <label for="videoReceita">Vídeo (opcional)</label>
+                                <input type="file" id="videoReceita" name="videoReceita" accept="video/*">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primario" style="width:100%; text-align:center; margin-top: 8px;">
+                            🍽️ Enviar Receita
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-grid">
+                <div class="rodape-logo">
+                    <a href="index.html">Power<span>Fit</span></a>
+                    <p>Sua loja de suplementos esportivos. Qualidade e performance para quem leva o treino a sério.</p>
+                </div>
+                <div class="rodape-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="receitas.html">Receitas</a></li>
+                    </ul>
+                </div>
+                <div class="rodape-col">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="carrinho.html">Carrinho</a></li>
+                    </ul>
+                </div>
+                <div class="rodape-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:contato@powerfit.com.br">contato@powerfit.com.br</a></li>
+                        <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rodape-bottom">
+                <p>© 2025 PowerFit Suplementos. Todos os direitos reservados.</p>
+                <div class="rodape-social">
+                    <a href="#" title="Instagram">📸</a>
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="WhatsApp">💬</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
