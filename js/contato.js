@@ -31,7 +31,7 @@ if (form) {
 
         try {
 
-            const resposta = await fetch("https://pi-power-fit.onrender.com/mensagem", {
+            const resposta = await fetch("http://localhost:3000/mensagem", {
 
                 method: "POST",
 
