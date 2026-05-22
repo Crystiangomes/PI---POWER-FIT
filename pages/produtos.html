@@ -75,6 +75,8 @@
                     <button class="filtro-btn" data-filtro="creatina">Creatina</button>
                     <button class="filtro-btn" data-filtro="pretreino">Pré-Treino</button>
                     <button class="filtro-btn" data-filtro="massa">Ganho de Massa</button>
+                    <button class="filtro-btn" data-filtro="aminoacido">Aminoácido</button>
+
                 </div>
 
                 <!-- Barra de pesquisa -->
@@ -83,99 +85,108 @@
                 <input  type="text"  id="pesquisaProduto"  placeholder="🔎 Buscar produto..." >
                 </div>
 
-<div id="lista-produtos"></div>
+<div id="lista-produtos">
 
-                <!-- Grade de produtos -->
-                <div class="produtos-grid" id="produtos-grid">
 
-                    <div class="produto-card" data-categoria="proteina">
-                        <div class="produto-card-img-wrap">
-                            <img src="../imagens/whey.jpg" alt="Whey Protein Pro" class="produto-card-img">
-                            <span class="produto-badge">🔥 Mais Vendido</span>
-                        </div>
-                        <div class="produto-card-body">
-                            <h3 class="produto-card-nome">Whey Protein Pro 1kg</h3>
-                            <p class="produto-card-desc">Proteína de soro de leite de alta qualidade. Ideal para recuperação muscular e ganho de massa magra.</p>
-                            <div class="produto-card-preco">R$ 129,90 <small>R$ 159,90</small></div>
-                        </div>
-                        <div class="produto-card-footer">
-                            <button class="btn-primario" onclick="adicionarCarrinho('Whey Protein Pro 1kg', 129.90)">🛒 Comprar</button>
-                        </div>
-                    </div>
 
-                    <div class="produto-card" data-categoria="creatina">
-                        <div class="produto-card-img-wrap">
-                            <img src="../imagens/creatina.jpg" alt="Creatina" class="produto-card-img">
-                            <span class="produto-badge">⚡ Oferta</span>
-                        </div>
-                        <div class="produto-card-body">
-                            <h3 class="produto-card-nome">Creatina Monohidratada 300g</h3>
-                            <p class="produto-card-desc">Aumente sua força e potência. Creatina pura de grau farmacêutico para máxima absorção.</p>
-                            <div class="produto-card-preco">R$ 69,90 <small>R$ 89,90</small></div>
-                        </div>
-                        <div class="produto-card-footer">
-                            <button class="btn-primario" onclick="adicionarCarrinho('Creatina Monohidratada 300g', 69.90)">🛒 Comprar</button>
-                        </div>
-                    </div>
+<!-- Grade de produtos -->
+<div class="produtos-grid" id="produtos-grid">
 
-                    <div class="produto-card" data-categoria="pretreino">
-                        <div class="produto-card-img-wrap">
-                            <img src="../imagens/pretreino.jpg" alt="Pré-Treino Extreme" class="produto-card-img">
-                        </div>
-                        <div class="produto-card-body">
-                            <h3 class="produto-card-nome">Pré-Treino Extreme 300g</h3>
-                            <p class="produto-card-desc">Energia explosiva, foco total e vasodilatação para um treino de alto desempenho.</p>
-                            <div class="produto-card-preco">R$ 89,90</div>
-                        </div>
-                        <div class="produto-card-footer">
-                            <button class="btn-primario" onclick="adicionarCarrinho('Pré-Treino Extreme 300g', 89.90)">🛒 Comprar</button>
-                        </div>
-                    </div>
+    <div class="produto-card" data-categoria="proteina">
+        <div class="produto-card-img-wrap">
+            <img src="../imagens/whey.jpg" alt="Whey Protein Pro" class="produto-card-img">
+            <span class="produto-badge">🔥 Mais Vendido</span>
+        </div>
+        <div class="produto-card-body">
+            <h3 class="produto-card-nome">Whey Protein Pro 1kg</h3>
+            <p class="produto-card-desc">Proteína de soro de leite de alta qualidade. Ideal para recuperação muscular e ganho de massa magra.</p>
+            <div class="produto-card-preco">R$ 129,90 <small>R$ 159,90</small></div>
+        </div>
+        <div class="produto-card-footer">
+            <button class="btn-primario" onclick="adicionarCarrinho('Whey Protein Pro 1kg', 129.90)">🛒 Comprar</button>
+        </div>
+    </div>
 
-                    <div class="produto-card" data-categoria="massa">
-                        <div class="produto-card-img-wrap">
-                            <img src="../imagens/hipercalorico.jpg" alt="Hipercalórico" class="produto-card-img">
-                        </div>
-                        <div class="produto-card-body">
-                            <h3 class="produto-card-nome">Hipercalórico Mass 3kg</h3>
-                            <p class="produto-card-desc">Alto teor calórico com proteínas e carboidratos balanceados para ganho de massa eficiente.</p>
-                            <div class="produto-card-preco">R$ 149,90</div>
-                        </div>
-                        <div class="produto-card-footer">
-                            <button class="btn-primario" onclick="adicionarCarrinho('Hipercalórico Mass 3kg', 149.90)">🛒 Comprar</button>
-                        </div>
-                    </div>
+    <div class="produto-card" data-categoria="creatina">
+        <div class="produto-card-img-wrap">
+            <img src="../imagens/creatina.jpg" alt="Creatina" class="produto-card-img">
+            <span class="produto-badge">⚡ Oferta</span>
+        </div>
+        <div class="produto-card-body">
+            <h3 class="produto-card-nome">Creatina Monohidratada 300g</h3>
+            <p class="produto-card-desc">Aumente sua força e potência. Creatina pura de grau farmacêutico para máxima absorção.</p>
+            <div class="produto-card-preco">R$ 69,90 <small>R$ 89,90</small></div>
+        </div>
+        <div class="produto-card-footer">
+            <button class="btn-primario" onclick="adicionarCarrinho('Creatina Monohidratada 300g', 69.90)">🛒 Comprar</button>
+        </div>
+    </div>
 
-                    <div class="produto-card" data-categoria="proteina">
-                        <div class="produto-card-img-wrap">
-                            <img src="../imagens/whey.jpg" alt="Whey Protein Isolado" class="produto-card-img">
-                            <span class="produto-badge">🌟 Premium</span>
-                        </div>
-                        <div class="produto-card-body">
-                            <h3 class="produto-card-nome">Whey Protein Isolado 900g</h3>
-                            <p class="produto-card-desc">Versão isolada com 90% de proteína por porção. Zero lactose e baixíssimo teor de gordura.</p>
-                            <div class="produto-card-preco">R$ 189,90 <small>R$ 229,90</small></div>
-                        </div>
-                        <div class="produto-card-footer">
-                            <button class="btn-primario" onclick="adicionarCarrinho('Whey Protein Isolado 900g', 189.90)">🛒 Comprar</button>
-                        </div>
-                    </div>
+    <div class="produto-card" data-categoria="pretreino">
+        <div class="produto-card-img-wrap">
+            <img src="../imagens/pretreino.jpg" alt="Pré-Treino Extreme" class="produto-card-img">
+        </div>
+        <div class="produto-card-body">
+            <h3 class="produto-card-nome">Pré-Treino Extreme 300g</h3>
+            <p class="produto-card-desc">Energia explosiva, foco total e vasodilatação para um treino de alto desempenho.</p>
+            <div class="produto-card-preco">R$ 89,90</div>
+        </div>
+        <div class="produto-card-footer">
+            <button class="btn-primario" onclick="adicionarCarrinho('Pré-Treino Extreme 300g', 89.90)">🛒 Comprar</button>
+        </div>
+    </div>
 
-                    <div class="produto-card" data-categoria="creatina">
-                        <div class="produto-card-img-wrap">
-                            <img src="../imagens/creatina.jpg" alt="Creatina HCL" class="produto-card-img">
-                        </div>
-                        <div class="produto-card-body">
-                            <h3 class="produto-card-nome">Creatina HCL 120g</h3>
-                            <p class="produto-card-desc">Creatina HCL com absorção superior, menor retenção hídrica e maior eficiência por dose.</p>
-                            <div class="produto-card-preco">R$ 94,90</div>
-                        </div>
-                        <div class="produto-card-footer">
-                            <button class="btn-primario" onclick="adicionarCarrinho('Creatina HCL 120g', 94.90)">🛒 Comprar</button>
-                        </div>
-                    </div>
+    <div class="produto-card" data-categoria="massa">
+        <div class="produto-card-img-wrap">
+            <img src="../imagens/hipercalorico.jpg" alt="Hipercalórico" class="produto-card-img">
+        </div>
+        <div class="produto-card-body">
+            <h3 class="produto-card-nome">Hipercalórico Mass 3kg</h3>
+            <p class="produto-card-desc">Alto teor calórico com proteínas e carboidratos balanceados para ganho de massa eficiente.</p>
+            <div class="produto-card-preco">R$ 149,90</div>
+        </div>
+        <div class="produto-card-footer">
+            <button class="btn-primario" onclick="adicionarCarrinho('Hipercalórico Mass 3kg', 149.90)">🛒 Comprar</button>
+        </div>
+    </div>
 
-                </div>
+    <div class="produto-card" data-categoria="proteina">
+        <div class="produto-card-img-wrap">
+            <img src="../imagens/isolado.jpeg" alt="Whey Protein Isolado" class="produto-card-img">
+            <span class="produto-badge">🌟 Premium</span>
+        </div>
+        <div class="produto-card-body">
+            <h3 class="produto-card-nome">Whey Protein Isolado 900g</h3>
+            <p class="produto-card-desc">Versão isolada com 90% de proteína por porção. Zero lactose e baixíssimo teor de gordura.</p>
+            <div class="produto-card-preco">R$ 189,90 <small>R$ 229,90</small></div>
+        </div>
+        <div class="produto-card-footer">
+            <button class="btn-primario" onclick="adicionarCarrinho('Whey Protein Isolado 900g', 189.90)">🛒 Comprar</button>
+        </div>
+    </div>
+
+    <div class="produto-card" data-categoria="aminoacido">
+        <div class="produto-card-img-wrap">
+            <img src="../imagens/bcaa.png" alt="BCAA" class="produto-card-img">
+        </div>
+        <div class="produto-card-body">
+            <h3 class="produto-card-nome">BCAA</h3>
+            <p class="produto-card-desc">BCAA de cadeia ramificada — leucina, isoleucina e valina — para quem treina de verdade.</p>
+            <div class="produto-card-preco">R$ 94,90</div>
+        </div>
+        <div class="produto-card-footer">
+            <button class="btn-primario" onclick="adicionarCarrinho('Creatina HCL 120g', 94.90)">🛒 Comprar</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+                
             </div>
         </section>
     </main>

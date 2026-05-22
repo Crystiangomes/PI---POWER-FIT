@@ -90,6 +90,9 @@ function initBuscaProdutos() {
     });
 }
 
+
+// 
+
 // ── CARRINHO (localStorage) ──────────────────────────────────
 
 function getCarrinho() {
