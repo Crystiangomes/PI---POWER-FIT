@@ -12,6 +12,24 @@
 </head>
 
 <body>
+    <script>
+        // Assim que a página carrega, pergunta ao servidor:
+        //tem alguém logado?
+        fetch("http://localhost:3000/me",{
+            credentials: "include" 
+                // Envia o cookie de sessão junto com a requisição
+        })
+        .then(resposta => {
+            if(!resposta.ok){
+                alert("Você precisa fazer o login para acessar os cursos!");
+                window.location.href = "login.html";
+            }
+            // se resposta.ok = true, a página simplesmente continua carregando
+        })
+
+    </script>
+
+
 
     <!-- CABEÇALHO -->
     <header class="topo">

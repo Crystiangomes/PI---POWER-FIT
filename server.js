@@ -106,3 +106,98 @@ app.listen(3000, () => {
     console.log("🚀 Servidor rodando em http://localhost:3000");
 
 });
+
+
+// ==========================
+// CADASTRO DE USUÁRIO
+// ==========================
+
+app.post("/cadastro", async (req, res) => {
+
+    try {
+
+        const { nome, email, senha } = req.body;
+
+        if (!nome || !email || !senha) {
+
+            return res.status(400).json({
+                mensagem: "Preencha todos os campos."
+            });
+        }
+
+        await pool.execute(
+
+            `INSERT INTO tb_usuarios (nome, email, senha)
+             VALUES (?, ?, ?)`,
+
+            [nome, email, senha]
+
+        );
+
+        return res.status(201).json({
+            mensagem: "Cadastro realizado com sucesso!"
+        });
+
+    } catch (erro) {
+
+        // EMAIL DUPLICADO
+        if (erro.code === "ER_DUP_ENTRY") {
+
+            return res.status(400).json({
+                mensagem: "E-mail já cadastrado."
+            });
+        }
+
+        // OUTROS ERROS
+        console.log(erro);
+
+        return res.status(500).json({
+            mensagem: "Erro ao cadastrar usuário."
+        });
+    }
+});
+
+
+// ==========================
+// LOGIN
+// ==========================
+
+app.post("/login", async (req, res) => {
+
+    try {
+
+        const { email, senha } = req.body;
+
+        const [usuarios] = await pool.execute(
+
+            `SELECT * FROM tb_usuarios
+             WHERE email = ? AND senha = ?`,
+
+            [email, senha]
+
+        );
+
+        if (usuarios.length > 0) {
+
+            return res.json({
+                sucesso: true,
+                mensagem: "Login realizado com sucesso!"
+            });
+
+        } else {
+
+            return res.status(401).json({
+                sucesso: false,
+                mensagem: "E-mail ou senha inválidos."
+            });
+        }
+
+    } catch (erro) {
+
+        console.log(erro);
+
+        return res.status(500).json({
+            mensagem: "Erro no servidor."
+        });
+    }
+});

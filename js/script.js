@@ -454,6 +454,7 @@ function initFormReceita() {
 }
 
 // ── LOGIN / CADASTRO ─────────────────────────────────────
+// ── LOGIN / CADASTRO ─────────────────────────────────────
 
 function initFormsAuth() {
 
@@ -461,9 +462,13 @@ function initFormsAuth() {
 
     const formRegistro = document.getElementById('formRegistro');
 
+    // ==========================
+    // LOGIN
+    // ==========================
+
     if (formLogin) {
 
-        formLogin.addEventListener('submit', e => {
+        formLogin.addEventListener('submit', async (e) => {
 
             e.preventDefault();
 
@@ -480,21 +485,58 @@ function initFormsAuth() {
                 return;
             }
 
-            mostrarToast(
-                '🔓 Login realizado com sucesso! Bem-vindo de volta.'
-            );
+            try {
 
-            setTimeout(() => {
+                const resposta = await fetch('http://localhost:3000/login', {
 
-                window.location.href = '../index.html';
+                    method: 'POST',
 
-            }, 1800);
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+
+                    body: JSON.stringify({
+                        email,
+                        senha
+                    })
+                });
+
+                const dados = await resposta.json();
+
+                mostrarToast(dados.mensagem);
+
+                if (dados.sucesso) {
+
+                    localStorage.setItem(
+                        'usuarioLogado',
+                        email
+                    );
+
+                    setTimeout(() => {
+
+                        window.location.href =
+                            '../index.html';
+
+                    }, 1500);
+                }
+
+            } catch (erro) {
+
+                console.log(erro);
+
+                mostrarToast('❌ Erro ao fazer login.');
+            }
         });
     }
 
+
+    // ==========================
+    // CADASTRO
+    // ==========================
+
     if (formRegistro) {
 
-        formRegistro.addEventListener('submit', e => {
+        formRegistro.addEventListener('submit', async (e) => {
 
             e.preventDefault();
 
@@ -533,15 +575,42 @@ function initFormsAuth() {
                 return;
             }
 
-            mostrarToast(
-                '✅ Conta criada com sucesso! Bem-vindo à PowerFit.'
-            );
+            try {
 
-            setTimeout(() => {
+                const resposta = await fetch('http://localhost:3000/cadastro', {
 
-                formRegistro.reset();
+                    method: 'POST',
 
-            }, 2000);
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+
+                    body: JSON.stringify({
+                        nome,
+                        email,
+                        senha
+                    })
+                });
+
+                const dados = await resposta.json();
+
+                mostrarToast(dados.mensagem);
+
+                if (resposta.ok) {
+
+                    setTimeout(() => {
+
+                        formRegistro.reset();
+
+                    }, 1500);
+                }
+
+            } catch (erro) {
+
+                console.log(erro);
+
+                mostrarToast('❌ Erro ao cadastrar.');
+            }
         });
     }
 }
