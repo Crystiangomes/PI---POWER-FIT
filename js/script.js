@@ -90,6 +90,8 @@ function initBuscaProdutos() {
     });
 }
 
+carregarProdutos();
+
 
 // 
 
@@ -518,7 +520,7 @@ function initFormsAuth() {
                     setTimeout(() => {
 
                         window.location.href =
-                            '../index.html';
+                            '../pages/produtos.html';
 
                     }, 1500);
                 }

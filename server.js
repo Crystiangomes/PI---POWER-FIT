@@ -23,6 +23,27 @@ app.use(cors());
 // PERMITE RECEBER JSON
 app.use(express.json());
 
+
+/*COOKIES */
+// 1. Importa o session  que permite gerenciar sessões de usuario
+const session = require("express-session");
+
+//2. Configuração de Sessão (do navegador)
+const sessionConfig = {
+    secret: process.env.SESSION_SECRET,     
+        // chave secreta para assinar o cookie
+    resave: false, 
+        // não salva a sessões se não houver mudança
+    saveUninitialized: false, 
+        // não cria sessão para usuários não logados
+    name: "techeduca.sid", 
+        // nome personalizado do cookie da sessão
+    cookie: {
+        httpOnly : true, // bloqueia o acesso via JavaScript
+        maxAge: 1000 * 60 * 60 // sessão expira em 1 hora (em mil)
+    }
+}
+
 /*
 ============================================================
 TESTE DE CONEXÃO COM O BANCO
